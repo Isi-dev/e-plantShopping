@@ -156,8 +156,9 @@ body {
 .luxury {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 650px;
+    margin-left: 20px;
     font-size: 19px;
 }
 
