@@ -172,6 +172,29 @@ body {
     font-size: 29px;
 
 }
+
+.cart-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: 40%;          /* move to center vertically */
+    left: 50%;         /* move to center horizontally */
+    
+    
+    font-size: 24px;
+    font-weight: bold;
+    color: white;     /* make it visible — change to white if needed */
+    pointer-events: none; /* clicking hits the cart, not the text */
+  }
+  
 .plantname_heading{
    display: flex;
    align-items: center;
@@ -181,7 +204,8 @@ body {
 .plant_heading{
     width: 400px;
     text-align: center;
-    margin: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
     border: 1px solid rgb(5, 4, 4);
     border-left: none;
     border-right: none;
