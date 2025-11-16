@@ -232,16 +232,19 @@ function ProductList({ onHomeClick }) {
         backgroundColor: '#4CAF50',
         color: '#fff!important',
         padding: '15px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignIems: 'center',
+        // display: 'flex',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1fr',
+        // justifyContent: 'space-between',
+        alignItems: 'center',
         fontSize: '20px',
     }
     const styleObjUl = {
-        display: 'flex',
-        justifyContent: 'space-between',
+        // display: 'flex',
+        // justifyContent: 'space-between',
         alignItems: 'center',
-        width: '1100px',
+        textAlign: 'center',
+        // width: '1100px',
     }
     const styleA = {
         color: 'white',
@@ -283,9 +286,13 @@ function ProductList({ onHomeClick }) {
                     </div>
 
                 </div>
-                <div style={styleObjUl}> 
-                <div> <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a></div> 
-                <div> <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}><h1 className='cart'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68"><rect width="156" height="156" fill="none"></rect><circle cx="80" cy="216" r="12"></circle><circle cx="184" cy="216" r="12"></circle><path d="M42.3,72H221.7l-26.4,92.4A15.9,15.9,0,0,1,179.9,176H84.1a15.9,15.9,0,0,1-15.4-11.6L32.5,37.8A8,8,0,0,0,24.8,32H8" fill="none" stroke="#faf9f9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" id="mainIconPathAttribute"></path></svg><span className="cart_quantity_count">{calculateTotalQuantity()}</span></h1></a></div> </div>
+                <div style={styleObjUl}>
+
+                    <div> <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a></div>
+                </div>
+                
+                <div className="cartWrapper"> <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}><h1  className='cart'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68"><rect width="156" height="156" fill="none"></rect><circle cx="80" cy="216" r="12"></circle><circle cx="184" cy="216" r="12"></circle><path d="M42.3,72H221.7l-26.4,92.4A15.9,15.9,0,0,1,179.9,176H84.1a15.9,15.9,0,0,1-15.4-11.6L32.5,37.8A8,8,0,0,0,24.8,32H8" fill="none" stroke="#faf9f9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" id="mainIconPathAttribute"></path></svg><span className="cart_quantity_count">{calculateTotalQuantity()}</span></h1></a></div>
+                
 
             </div>
 
@@ -305,7 +312,7 @@ function ProductList({ onHomeClick }) {
                                             src={plant.image} // Display the plant image
                                             alt={plant.name} // Alt text for accessibility
                                         />
-                                        
+
                                         {/* Display other plant details like description and cost */}
                                         <div className="product-price">{plant.cost}</div> {/* Display plant cost */}
                                         <div className="product-description">{plant.description}</div> {/* Display plant description */}

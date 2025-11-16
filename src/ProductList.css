@@ -160,6 +160,13 @@ body {
     width: 650px;
     font-size: 19px;
 }
+
+.cartWrapper{
+    
+    margin: 0 auto;
+    margin-right:27px;
+}
+
 .cart{
     color: white;
     display: flex;
