@@ -1,2 +1,2 @@
-# E-Plang-Shopping Coding-Project
+# Ecommerce-Plant-Shopping Coding-Project
 Result: https://eplantshoppingxxxx.netlify.app/
